@@ -1,12 +1,12 @@
 <h1>Classifieds</h1>
 <section>
-  <% @classifieds.each |classifieds| %>
+  <% @classifieds.each do |classifieds|  %>
     <article>
         <h2> <%= classifieds.title %> </h2>
-        <p> <%= classified.description %> </p>
+        <p> <%= classifieds.description %> </p>
 
-        <div> <%= "s#{classified.price}" %> </div>
-        <div> <%= classified.category %> </div>
+        <div> <%= "$#{classifieds.price}" %> </div>
+        <div> <%= classifieds.category.name %> </div>
     </article>
-  <%= end %>
+  <% end %>
 </section>
